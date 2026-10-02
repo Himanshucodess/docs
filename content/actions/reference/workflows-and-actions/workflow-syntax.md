@@ -872,7 +872,7 @@ Each `run` keyword represents a new process and shell in the runner environment.
 
 ## `jobs.<job_id>.steps[*].working-directory`
 
-Using the `working-directory` keyword, you can specify the working directory of where to run the command.
+Using the `working-directory` keyword, you can specify the working directory of where to run the command. This keyword only applies to `run` steps and cannot be used with `uses` steps to change the working directory of an action.
 
 ```yaml
 - name: Clean temp directory
