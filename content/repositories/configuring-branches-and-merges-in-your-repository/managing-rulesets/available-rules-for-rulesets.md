@@ -26,6 +26,9 @@ For more information on creating rulesets and bypass permissions, see {% ifversi
 
 If selected, only users with bypass permissions can create branches or tags whose name matches the pattern you specify.
 
+> [!NOTE]
+> If you use a merge queue and this rule targets branches that match the merge queue's temporary branch pattern (`gh-readonly-queue/{base_branch}`), add the merge queue to the ruleset's bypass list. Otherwise, the merge queue will be blocked from creating those branches and queued merges will fail. For more information, see [AUTOTITLE](/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue).
+
 ## Restrict updates
 
 If selected, only users with bypass permissions can push to branches or tags whose name matches the pattern you specify.
